@@ -1,0 +1,21 @@
+SUBIR A GITHUB - ESTRUCTURA CORRECTA
+
+Subí el contenido de esta carpeta a la raíz del repositorio mira-tu-estado.
+
+Debe quedar así:
+
+index.html
+styles.css
+app.js
+config.js
+portal-clientes.json
+robots.txt
+assets/
+  icon.png
+  icon.ico
+  favicon.png
+
+El logo se carga desde: assets/icon.png
+El favicon se carga desde: assets/favicon.png
+
+No subas archivos con nombres como icon(3).png, favicon(1).png, portal-clientes(1).json.

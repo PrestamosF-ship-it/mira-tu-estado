@@ -1,22 +1,105 @@
 [
   {
-    "dni": "00000000",
-    "codigo": "1234",
-    "nombre": "cliente demo",
-    "total": 140000,
-    "pagado": 70000,
-    "pendiente": 70000,
-    "vencimiento": "2026-07-15",
-    "estado": "activo",
+    "dni": "263800088",
+    "codigo": "3344",
+    "nombre": "esteban miranda",
+    "total": 300000,
+    "pagado": 300000,
+    "pendiente": 0,
+    "vencimiento": "-",
+    "estado": "cancelado",
     "cuotaLabel": "💸 Cuota semanal",
-    "cuotaMonto": 35000,
-    "periodLabel": "4 semanales · 40%",
+    "cuotaMonto": 0,
+    "periodLabel": "8 cuotas semanales personalizadas",
     "installments": [
-      { "number": 1, "dueDate": "2026-07-01", "amount": 35000, "paidAmount": 35000 },
-      { "number": 2, "dueDate": "2026-07-08", "amount": 35000, "paidAmount": 35000 },
-      { "number": 3, "dueDate": "2026-07-15", "amount": 35000, "paidAmount": 0 },
-      { "number": 4, "dueDate": "2026-07-22", "amount": 35000, "paidAmount": 0 }
-    ],
-    "generatedAt": "2026-07-03T00:00:00.000Z"
+      {
+        "id": "CUO_mr4jh0ug_i2n6y",
+        "number": 1,
+        "dueDate": "2026-06-19",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 14000,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_j0xvu",
+        "number": 2,
+        "dueDate": "2026-06-26",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 7000,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_6az40",
+        "number": 3,
+        "dueDate": "2026-07-03",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_7qu43",
+        "number": 4,
+        "dueDate": "2026-07-10",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_xn8v5",
+        "number": 5,
+        "dueDate": "2026-07-17",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_r9xgn",
+        "number": 6,
+        "dueDate": "2026-07-24",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_bw7lm",
+        "number": 7,
+        "dueDate": "2026-07-31",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      },
+      {
+        "id": "CUO_mr4jh0ug_ntej4",
+        "number": 8,
+        "dueDate": "2026-08-07",
+        "amount": 37500,
+        "paidAmount": 37500,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pagado"
+      }
+    ]
   }
 ]
