@@ -1,0 +1,22 @@
+[
+  {
+    "dni": "00000000",
+    "codigo": "1234",
+    "nombre": "cliente demo",
+    "total": 140000,
+    "pagado": 70000,
+    "pendiente": 70000,
+    "vencimiento": "2026-07-15",
+    "estado": "activo",
+    "cuotaLabel": "💸 Cuota semanal",
+    "cuotaMonto": 35000,
+    "periodLabel": "4 semanales · 40%",
+    "installments": [
+      { "number": 1, "dueDate": "2026-07-01", "amount": 35000, "paidAmount": 35000 },
+      { "number": 2, "dueDate": "2026-07-08", "amount": 35000, "paidAmount": 35000 },
+      { "number": 3, "dueDate": "2026-07-15", "amount": 35000, "paidAmount": 0 },
+      { "number": 4, "dueDate": "2026-07-22", "amount": 35000, "paidAmount": 0 }
+    ],
+    "generatedAt": "2026-07-03T00:00:00.000Z"
+  }
+]

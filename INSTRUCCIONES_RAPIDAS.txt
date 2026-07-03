@@ -1,0 +1,13 @@
+PORTAL PREMIUM - PRESTAMOS FLASH
+
+1) Subi esta carpeta completa a un repositorio de GitHub.
+2) Activá GitHub Pages desde Settings > Pages.
+3) Reemplazá portal-clientes.json por el archivo que exporta la app.
+4) Cada vez que cargues pagos nuevos, volvé a exportar portal y reemplazá ese JSON en GitHub.
+
+Demo:
+DNI: 00000000
+Código: 1234
+
+IMPORTANTE:
+No subas data.json completo. Subí solo portal-clientes.json.
