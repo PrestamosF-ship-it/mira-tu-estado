@@ -4,13 +4,12 @@
     "codigo": "3344",
     "nombre": "esteban miranda",
     "total": 300000,
-    "pagado": 75000,
-    "pendiente": 225000,
-    "vencimiento": "3/7/2026",
-    "estado": "activo",
-    "cuotaLabel": "Cuota semanal",
-    "cuotaMonto": 37500,
-    "mora": 0,
+    "pagado": 300000,
+    "pendiente": 0,
+    "vencimiento": "-",
+    "estado": "cancelado",
+    "cuotaLabel": "💸 Cuota semanal",
+    "cuotaMonto": 0,
     "periodLabel": "8 cuotas semanales personalizadas",
     "installments": [
       {
@@ -40,66 +39,66 @@
         "number": 3,
         "dueDate": "2026-07-03",
         "amount": 37500,
-        "paidAmount": 0,
+        "paidAmount": 37500,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_mr4jh0ug_7qu43",
         "number": 4,
         "dueDate": "2026-07-10",
         "amount": 37500,
-        "paidAmount": 0,
+        "paidAmount": 37500,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_mr4jh0ug_xn8v5",
         "number": 5,
         "dueDate": "2026-07-17",
         "amount": 37500,
-        "paidAmount": 0,
+        "paidAmount": 37500,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_mr4jh0ug_r9xgn",
         "number": 6,
         "dueDate": "2026-07-24",
         "amount": 37500,
-        "paidAmount": 0,
+        "paidAmount": 37500,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_mr4jh0ug_bw7lm",
         "number": 7,
         "dueDate": "2026-07-31",
         "amount": 37500,
-        "paidAmount": 0,
+        "paidAmount": 37500,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_mr4jh0ug_ntej4",
         "number": 8,
         "dueDate": "2026-08-07",
         "amount": 37500,
-        "paidAmount": 0,
+        "paidAmount": 37500,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       }
     ]
   }
