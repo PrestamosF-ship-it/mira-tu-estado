@@ -46,6 +46,66 @@ button, input { font: inherit; }
 .orb-a { top: -8rem; left: -7rem; background: var(--primary); }
 .orb-b { right: -9rem; bottom: -8rem; background: var(--primary-2); }
 
+
+
+.money-rain {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.money-rain span {
+  position: absolute;
+  top: -12vh;
+  color: rgba(95, 255, 220, 0.14);
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2vw, 2.4rem);
+  text-shadow: 0 0 16px rgba(36, 216, 201, 0.16);
+  animation-name: money-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  user-select: none;
+}
+
+.money-rain span:nth-child(1)  { left: 3%;  animation-duration: 14s; animation-delay: -2s; }
+.money-rain span:nth-child(2)  { left: 9%;  animation-duration: 18s; animation-delay: -8s; }
+.money-rain span:nth-child(3)  { left: 15%; animation-duration: 16s; animation-delay: -5s; }
+.money-rain span:nth-child(4)  { left: 21%; animation-duration: 20s; animation-delay: -11s; }
+.money-rain span:nth-child(5)  { left: 29%; animation-duration: 15s; animation-delay: -7s; }
+.money-rain span:nth-child(6)  { left: 35%; animation-duration: 19s; animation-delay: -1s; }
+.money-rain span:nth-child(7)  { left: 42%; animation-duration: 13s; animation-delay: -9s; }
+.money-rain span:nth-child(8)  { left: 48%; animation-duration: 17s; animation-delay: -4s; }
+.money-rain span:nth-child(9)  { left: 54%; animation-duration: 21s; animation-delay: -12s; }
+.money-rain span:nth-child(10) { left: 60%; animation-duration: 15s; animation-delay: -6s; }
+.money-rain span:nth-child(11) { left: 66%; animation-duration: 18s; animation-delay: -3s; }
+.money-rain span:nth-child(12) { left: 72%; animation-duration: 14s; animation-delay: -10s; }
+.money-rain span:nth-child(13) { left: 78%; animation-duration: 22s; animation-delay: -13s; }
+.money-rain span:nth-child(14) { left: 84%; animation-duration: 16s; animation-delay: -2s; }
+.money-rain span:nth-child(15) { left: 89%; animation-duration: 19s; animation-delay: -8s; }
+.money-rain span:nth-child(16) { left: 93%; animation-duration: 17s; animation-delay: -5s; }
+.money-rain span:nth-child(17) { left: 97%; animation-duration: 20s; animation-delay: -14s; }
+.money-rain span:nth-child(18) { left: 50%; animation-duration: 24s; animation-delay: -16s; font-size: clamp(1.8rem, 2.3vw, 3rem); color: rgba(87, 168, 255, 0.10); }
+
+@keyframes money-fall {
+  0% {
+    transform: translate3d(0, -12vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(12px, 50vh, 0) rotate(12deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(-10px, 115vh, 0) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
 .portal-shell {
   position: relative;
   z-index: 1;
