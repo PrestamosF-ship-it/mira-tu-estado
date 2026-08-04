@@ -1,0 +1,61 @@
+ESTA ES LA PÁGINA COMPLETA “MIRÁ TU ESTADO”
+================================================
+
+IMPORTANTE
+----------
+Ninguno de los tres ZIP que revisamos era la página completa:
+- prestamos_flash_vista_banco_actual_corregido: es un PARCHE de la app.
+- PrestamosFlash_v3.2_Corregida_Limpia: es la APP de escritorio.
+- prestamos-flash-logo-corregido-github-pages: es el SIMULADOR para pedir préstamos.
+
+ESTE ZIP sí contiene la página completa para un repositorio GitHub vacío.
+
+ARCHIVOS QUE DEBEN QUEDAR EN LA RAÍZ DEL REPOSITORIO
+-----------------------------------------------------
+.nojekyll
+index.html
+styles.css
+config.js
+app.js
+portal-clientes.json
+assets/icon.png
+assets/favicon.png
+
+CÓMO SUBIR DESDE CERO
+---------------------
+1. Descomprimí este ZIP.
+2. Entrá en el repositorio vacío “mira-tu-estado”.
+3. Elegí Add file > Upload files.
+4. Arrastrá TODO el contenido de esta carpeta, incluida la carpeta assets.
+5. Confirmá con Commit changes.
+6. En Settings > Pages elegí:
+   - Source: Deploy from a branch
+   - Branch: main
+   - Folder: /(root)
+7. Abrí:
+   https://prestamosf-ship-it.github.io/mira-tu-estado/
+8. Probá en incógnito o presioná Ctrl + F5.
+
+PRUEBA
+------
+DNI: 40451326
+Código: 2825
+
+También funciona:
+CUIL: 27-40451326-0
+Código: 2825
+
+POR QUÉ PARECÍA QUE LA APP NO EXPORTABA DNI/CUIL
+------------------------------------------------
+La app sí exporta el documento dentro del campo “dni”.
+Si cargaste un CUIL, se guarda allí el CUIL completo.
+El problema anterior era que la página solo comparaba el número completo
+y no reconocía que 40451326 pertenece a 27-40451326-0.
+
+Además, el botón “Exportar portal” de la app solo crea o actualiza:
+panel_cliente/portal-clientes.json
+
+No lo sube solo a GitHub. Cada vez que actualices datos:
+1. Tocá Exportar portal.
+2. Buscá panel_cliente/portal-clientes.json.
+3. Reemplazá solamente ese archivo en GitHub.
