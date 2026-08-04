@@ -68,16 +68,16 @@
 
     try {
       const rows = await loadPortalRows();
-      const match = rows.find((row) => {
+      const matches = rows.filter((row) => {
         return idsMatch(row.dni, dni) && normalizeCode(row.codigo) === code;
       });
 
-      if (!match) {
+      if (!matches.length) {
         showMessage("No encontré una cuenta con ese DNI/CUIT y código. Revisá los datos o pedí el código nuevamente.", "error");
         return;
       }
 
-      renderAccount(match);
+      renderAccount(matches[0], matches, 0);
     } catch (error) {
       console.error(error);
       showMessage("No se pudieron cargar los datos del portal. Revisá que portal-clientes.json esté subido junto al index.html.", "error");
@@ -99,7 +99,7 @@
     return Array.isArray(raw) ? raw : [];
   }
 
-  function renderAccount(row) {
+  function renderAccount(row, matchingRows = [row], selectedIndex = 0) {
     const state = classifyAccount(row);
     const total = numberOf(row.total);
     const paid = Math.min(total, numberOf(row.pagado));
@@ -112,7 +112,11 @@
     els.message.classList.add("hidden");
 
     els.clientName.textContent = titleCase(row.nombre || "Cliente");
-    els.clientMeta.textContent = `DNI/CUIT terminado en ${lastDigits(row.dni)} · Código portal validado`;
+    const loanPosition = matchingRows.length > 1
+      ? ` · Préstamo ${selectedIndex + 1} de ${matchingRows.length}`
+      : "";
+    els.clientMeta.textContent = `DNI/CUIT terminado en ${lastDigits(row.dni)} · Código portal validado${loanPosition}`;
+    renderLoanSelector(matchingRows, selectedIndex);
 
     els.statusBadge.textContent = state.label;
     els.statusBadge.className = `status-badge ${state.kind}`;
@@ -134,6 +138,56 @@
     renderInstallments(row.installments || []);
     setupWhatsapp(row);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function renderLoanSelector(rows, selectedIndex) {
+    const accountTop = els.accountCard.querySelector(".account-top");
+    if (!accountTop) return;
+
+    let selector = document.getElementById("loanSelector");
+    if (rows.length <= 1) {
+      if (selector) selector.remove();
+      return;
+    }
+
+    if (!selector) {
+      selector = document.createElement("div");
+      selector.id = "loanSelector";
+      selector.style.cssText = "display:grid;gap:10px;padding:14px;border:1px solid rgba(159,209,221,.18);border-radius:16px;background:rgba(4,13,21,.38)";
+      accountTop.appendChild(selector);
+    }
+
+    selector.innerHTML = "";
+
+    const title = document.createElement("strong");
+    title.textContent = `Este cliente tiene ${rows.length} préstamos activos`;
+    selector.appendChild(title);
+
+    const buttons = document.createElement("div");
+    buttons.style.cssText = "display:flex;flex-wrap:wrap;gap:9px";
+
+    rows.forEach((loan, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `btn ${index === selectedIndex ? "primary" : "ghost"} small`;
+
+      const plan = String(loan.periodLabel || "").trim();
+      const due = String(loan.vencimiento || "").trim();
+      button.textContent = [
+        `Préstamo ${index + 1}`,
+        money(numberOf(loan.total)),
+        plan,
+        due && due !== "-" ? `vence ${due}` : ""
+      ].filter(Boolean).join(" · ");
+
+      button.addEventListener("click", () => {
+        renderAccount(loan, rows, index);
+      });
+
+      buttons.appendChild(button);
+    });
+
+    selector.appendChild(buttons);
   }
 
   function renderInstallments(installments) {
