@@ -69,7 +69,7 @@
     try {
       const rows = await loadPortalRows();
       const match = rows.find((row) => {
-        return normalizeId(row.dni) === dni && normalizeCode(row.codigo) === code;
+        return idsMatch(row.dni, dni) && normalizeCode(row.codigo) === code;
       });
 
       if (!match) {
@@ -85,7 +85,8 @@
   }
 
   async function loadPortalRows() {
-    if (portalRows) return portalRows;
+    // Se consulta nuevamente en cada búsqueda para no conservar datos viejos
+    // después de reemplazar portal-clientes.json en GitHub.
     const response = await fetch(`${CONFIG.dataUrl}?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const raw = await response.json();
@@ -237,8 +238,37 @@
     return String(value || "").replace(/\D/g, "");
   }
 
+  // Acepta tanto DNI solo (7 u 8 dígitos) como CUIL/CUIT completo.
+  // Ejemplo: 40451326 coincide con 27-40451326-0.
+  function idVariants(value) {
+    const digits = normalizeId(value);
+    const variants = new Set();
+    if (!digits) return variants;
+
+    variants.add(digits);
+
+    // Un CUIL/CUIT tiene prefijo de 2 dígitos y verificador final.
+    if (digits.length === 10 || digits.length === 11) {
+      const documentNumber = digits.slice(2, -1).replace(/^0+(?=\d)/, "");
+      if (documentNumber) variants.add(documentNumber);
+    }
+
+    // Normaliza documentos que pudieran venir con ceros a la izquierda.
+    if (digits.length <= 8) {
+      variants.add(digits.replace(/^0+(?=\d)/, ""));
+    }
+
+    return variants;
+  }
+
+  function idsMatch(storedValue, enteredValue) {
+    const stored = idVariants(storedValue);
+    const entered = idVariants(enteredValue);
+    return [...entered].some((value) => value && stored.has(value));
+  }
+
   function normalizeCode(value) {
-    return String(value || "").trim().replace(/\s+/g, "");
+    return String(value || "").replace(/\D/g, "");
   }
 
   function numberOf(value) {

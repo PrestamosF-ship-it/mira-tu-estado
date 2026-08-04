@@ -13,7 +13,6 @@
 <body>
   <div class="bg-orb orb-a"></div>
   <div class="bg-orb orb-b"></div>
-
   <main class="portal-shell">
     <section class="hero-panel" aria-labelledby="portalTitle">
       <div class="brand-row">
@@ -24,7 +23,6 @@
           <p class="brand-subtitle">Tu crédito al instante</p>
         </div>
       </div>
-
       <div class="hero-copy">
         <span class="pill soft">Consulta segura por DNI + código</span>
         <h2>Consultá tus cuotas, saldo y vencimientos.</h2>
@@ -33,7 +31,6 @@
           próximo vencimiento y saldo pendiente.
         </p>
       </div>
-
       <div class="traffic-card">
         <div class="traffic-title">Semáforo de estado</div>
         <div class="traffic-list">
@@ -43,7 +40,6 @@
         </div>
       </div>
     </section>
-
     <section class="access-panel" aria-label="Acceso al estado de cuenta">
       <div id="loginCard" class="card login-card">
         <div class="section-head compact">
@@ -53,29 +49,23 @@
           </div>
           <div class="lock-badge">Privado</div>
         </div>
-
         <form id="accessForm" class="form-grid" autocomplete="off">
           <label>
             <span>DNI / CUIT</span>
             <input id="dniInput" inputmode="numeric" placeholder="Ej: 12345678" required />
           </label>
-
           <label>
             <span>Código portal</span>
             <input id="codeInput" inputmode="numeric" placeholder="Ej: 2603" required />
           </label>
-
           <button class="btn primary" type="submit">Consultar estado</button>
           <button class="btn ghost" type="button" id="clearBtn">Limpiar</button>
         </form>
-
         <div id="loginMessage" class="message hidden" role="status"></div>
-
         <p class="fine-print">
-          El código portal figura en el alta del cliente o puede solicitarse a Préstamos Flash.
+          Podés ingresar el DNI solo o el CUIT/CUIL completo. El código portal figura en el alta del cliente.
         </p>
       </div>
-
       <div id="accountCard" class="account hidden">
         <div class="account-top card">
           <button id="backBtn" class="btn ghost small" type="button">← Nueva consulta</button>
@@ -88,7 +78,6 @@
             <div id="statusBadge" class="status-badge neutral">Estado</div>
           </div>
         </div>
-
         <div class="summary-grid">
           <article class="metric card">
             <span>Total</span>
@@ -111,7 +100,6 @@
             <small id="nextDueLabel">Sin cuotas pendientes</small>
           </article>
         </div>
-
         <section class="card progress-card">
           <div class="progress-head">
             <div>
@@ -122,7 +110,6 @@
           </div>
           <div class="progress-bar"><span id="progressFill"></span></div>
         </section>
-
         <section class="card installments-card">
           <div class="section-head">
             <div>
@@ -131,7 +118,6 @@
             </div>
             <div id="updatedAt" class="updated">Actualizado: -</div>
           </div>
-
           <div class="table-wrap">
             <table>
               <thead>
@@ -148,7 +134,6 @@
             </table>
           </div>
         </section>
-
         <section class="card note-card">
           <h3>Importante</h3>
           <p>
@@ -160,12 +145,11 @@
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <span id="footerText">Información actualizada según el último respaldo publicado.</span>
   </footer>
 
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+  <script src="config.js?v=20260804-2"></script>
+  <script src="app.js?v=20260804-2"></script>
 </body>
 </html>
