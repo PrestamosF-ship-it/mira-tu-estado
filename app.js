@@ -206,13 +206,14 @@
       const balance = Math.max(0, amount - paid);
       const status = classifyInstallment(item);
       const tr = document.createElement("tr");
+      tr.className = `installment-row ${status.kind}`;
       tr.innerHTML = `
         <td>${escapeHtml(item.number || index + 1)}</td>
         <td>${formatDate(item.dueDate)}</td>
         <td>${money(amount)}</td>
         <td>${money(paid)}</td>
         <td>${money(balance)}</td>
-        <td><span class="tag ${status.kind}">${status.label}</span></td>
+        <td><span class="installment-status ${status.kind}">${status.label}</span></td>
       `;
       els.installmentsBody.appendChild(tr);
     });
