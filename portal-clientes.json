@@ -1,5 +1,43 @@
 [
   {
+    "dni": "23-45199028-4",
+    "codigo": "8534",
+    "nombre": "estrella ramirez",
+    "total": 75000,
+    "pagado": 0,
+    "pendiente": 75000,
+    "vencimiento": "26/8/2026",
+    "estado": "activo",
+    "cuotaLabel": "Cuota semanal",
+    "cuotaMonto": 37500,
+    "mora": 0,
+    "periodLabel": "2 cuotas semanales",
+    "installments": [
+      {
+        "id": "CUO_mt0j6cna_uemhh",
+        "number": 1,
+        "dueDate": "2026-08-26",
+        "amount": 37500,
+        "paidAmount": 0,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pendiente"
+      },
+      {
+        "id": "CUO_mt0j6cna_j2wm1",
+        "number": 2,
+        "dueDate": "2026-09-02",
+        "amount": 37500,
+        "paidAmount": 0,
+        "latePaidAmount": 0,
+        "lateCondonedAmount": 0,
+        "discountAmount": 0,
+        "status": "pendiente"
+      }
+    ]
+  },
+  {
     "dni": "27-35143220-4",
     "codigo": "2878",
     "nombre": "cintia alvarez",
@@ -201,12 +239,12 @@
     "nombre": "sol díaz",
     "total": 1400000,
     "pagado": 0,
-    "pendiente": 1411000,
+    "pendiente": 1413000,
     "vencimiento": "10/8/2026",
     "estado": "moroso",
     "cuotaLabel": "Cuota semanal",
     "cuotaMonto": 350000,
-    "mora": 11000,
+    "mora": 13000,
     "periodLabel": "4 cuotas semanales",
     "installments": [
       {
@@ -260,13 +298,13 @@
     "codigo": "3073",
     "nombre": "lucas cuenca",
     "total": 320000,
-    "pagado": 40000,
-    "pendiente": 282000,
-    "vencimiento": "18/8/2026",
-    "estado": "moroso",
+    "pagado": 80000,
+    "pendiente": 240000,
+    "vencimiento": "25/8/2026",
+    "estado": "activo",
     "cuotaLabel": "Cuota semanal",
     "cuotaMonto": 40000,
-    "mora": 2000,
+    "mora": 0,
     "periodLabel": "8 cuotas semanales",
     "installments": [
       {
@@ -285,11 +323,11 @@
         "number": 2,
         "dueDate": "2026-08-18",
         "amount": 40000,
-        "paidAmount": 0,
+        "paidAmount": 40000,
         "latePaidAmount": 0,
-        "lateCondonedAmount": 0,
+        "lateCondonedAmount": 4000,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_msf36ry7_z6fuh",
@@ -424,13 +462,13 @@
     "codigo": "8282",
     "nombre": "erika montania",
     "total": 210000,
-    "pagado": 52500,
-    "pendiente": 159000,
-    "vencimiento": "18/8/2026",
-    "estado": "moroso",
+    "pagado": 105000,
+    "pendiente": 105000,
+    "vencimiento": "25/8/2026",
+    "estado": "activo",
     "cuotaLabel": "Cuota semanal",
     "cuotaMonto": 52500,
-    "mora": 1500,
+    "mora": 0,
     "periodLabel": "4 cuotas semanales",
     "installments": [
       {
@@ -449,11 +487,11 @@
         "number": 2,
         "dueDate": "2026-08-18",
         "amount": 52500,
-        "paidAmount": 0,
-        "latePaidAmount": 0,
+        "paidAmount": 52500,
+        "latePaidAmount": 1500,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_msf1znxu_5zcww",
@@ -768,9 +806,9 @@
     "codigo": "2825",
     "nombre": "rocio zarza",
     "total": 400000,
-    "pagado": 100000,
-    "pendiente": 300000,
-    "vencimiento": "19/8/2026",
+    "pagado": 150000,
+    "pendiente": 250000,
+    "vencimiento": "26/8/2026",
     "estado": "activo",
     "cuotaLabel": "Cuota semanal",
     "cuotaMonto": 50000,
@@ -804,11 +842,11 @@
         "number": 3,
         "dueDate": "2026-08-19",
         "amount": 50000,
-        "paidAmount": 0,
+        "paidAmount": 50000,
         "latePaidAmount": 0,
         "lateCondonedAmount": 0,
         "discountAmount": 0,
-        "status": "pendiente"
+        "status": "pagado"
       },
       {
         "id": "CUO_ms6krkj3_l0m3x",
